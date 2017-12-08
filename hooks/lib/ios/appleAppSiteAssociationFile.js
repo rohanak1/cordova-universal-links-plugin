@@ -117,7 +117,8 @@ function saveContentToFile(filePrefix, content) {
   try {
     fs.writeFileSync(filePath, JSON.stringify(content, null, 2), 'utf8');
   } catch (err) {
-    console.log(err);
+    var errorString = "Could not create file: ";
+    console.log(errorString.concat(filePath));
   }
 }
 
